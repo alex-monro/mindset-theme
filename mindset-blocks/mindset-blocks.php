@@ -56,7 +56,7 @@ function fwd_render_service_posts( $attributes ) {
             'post_type'      => 'fwd-service',
             'posts_per_page' => -1,
             'orderby'        => 'title',
-            'order'          => 'DESC'
+            'order'          => 'ASC'
         );
         
         // FIRST WP_Query - Navigation links
