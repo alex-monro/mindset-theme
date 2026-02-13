@@ -59,11 +59,11 @@ function fwd_render_service_posts( $attributes ) {
             'order'          => 'ASC'
         );
         
-        // FIRST WP_Query - Navigation links
+        // FIRST WP_Query - Navigation links (UNCHANGED)
         $query = new WP_Query( $args );
         
         if ( $query->have_posts() ) {
-            echo '<nav>';
+            echo '<nav class="services-nav">';
             while( $query->have_posts() ) {
                 $query->the_post();
                 $postID = get_the_ID();
@@ -74,23 +74,49 @@ function fwd_render_service_posts( $attributes ) {
             wp_reset_postdata(); 
         }
         
-        // SECOND WP_Query - Full content
-        $query = new WP_Query( $args );
+        // Organized by Service Type taxonomy
+        $terms = get_terms( array(
+            'taxonomy' => 'fwd-service-type',
+        ) );
         
-        if ( $query->have_posts() ) {
-            while( $query->have_posts() ) {
-                $query->the_post();
-                $postID = get_the_ID();
+        if ( $terms && ! is_wp_error( $terms ) ) {
+            foreach ( $terms as $term ) {
+               
                 
-                echo '<article id="post-' . $postID . '">';
-                    echo '<h2>' . get_the_title() . '</h2>';
-                    the_post_thumbnail();
-                    the_content();
-                echo '</article>';
+                $args = array(
+                    'post_type'      => 'fwd-service',
+                    'posts_per_page' => -1,
+                    'orderby'        => 'title',
+                    'order'          => 'ASC',
+                    'tax_query'      => array(
+                        array(
+                            'taxonomy' => 'fwd-service-type',
+                            'field'    => 'slug',
+                            'terms'    => $term->slug,
+                        ),
+                    ),
+                );
+                
+                $query = new WP_Query( $args );
+                
+                if ( $query->have_posts() ) {
+                    while ( $query->have_posts() ) {
+                        $query->the_post();
+                        $postID = get_the_ID();
+                        
+                        echo '<article id="post-' . $postID . '">';
+                            echo '<h2>' . get_the_title() . '</h2>';
+                            the_post_thumbnail();
+                            the_content();
+                            if ( get_field( 'starting_price' ) ) {
+                                echo '<p>Starting at $'. get_field( 'starting_price' ) .'</p>';
+}
+                        echo '</article>';
+                    }
+                    wp_reset_postdata();
+                }
             }
-            wp_reset_postdata(); 
         }
-        
         ?>
     </div>
     <?php

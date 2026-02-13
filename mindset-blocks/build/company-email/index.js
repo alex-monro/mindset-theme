@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/company-address/edit.js"
-/*!*************************************!*\
-  !*** ./src/company-address/edit.js ***!
-  \*************************************/
+/***/ "./src/company-email/edit.js"
+/*!***********************************!*\
+  !*** ./src/company-email/edit.js ***!
+  \***********************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -63,7 +63,7 @@ function Edit({
 
   // Destructure meta data
   const {
-    company_address
+    company_email
   } = meta;
 
   // Helper for setting a single meta value without mutating state
@@ -85,27 +85,27 @@ function Edit({
         height: "24",
         viewBox: "0 0 24 24",
         role: "img",
-        "aria-label": "Location Icon",
+        "aria-label": "Email icon",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
-          d: "M12 0c-3.148 0-6 2.553-6 5.702 0 3.148 2.602 6.907 6 12.298 3.398-5.391 6-9.15 6-12.298 0-3.149-2.851-5.702-6-5.702zm0 8c-1.105 0-2-.895-2-2s.895-2 2-2 2 .895 2 2-.895 2-2 2zm4 14.5c0 .828-1.79 1.5-4 1.5s-4-.672-4-1.5 1.79-1.5 4-1.5 4 .672 4 1.5z"
+          d: "M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enter address here...', 'company-address'),
+        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Enter email here...', 'company-email'),
         tagName: "p",
-        value: company_address,
-        onChange: nextValue => updateMeta('company_address', nextValue)
+        value: company_email,
+        onChange: nextValue => updateMeta('company_email', nextValue)
       })]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
-        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Settings', 'company-address'),
+        title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Settings', 'company-email'),
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, {
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
-            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Show SVG Icon', 'company-address'),
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Show SVG Icon', 'company-email'),
             checked: svgIcon,
             onChange: value => setAttributes({
               svgIcon: value
             }),
-            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Display an SVG icon next to the address.', 'company-address')
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Display an SVG icon next to the email.', 'company-email')
           })
         })
       })
@@ -115,18 +115,18 @@ function Edit({
 
 /***/ },
 
-/***/ "./src/company-address/index.js"
-/*!**************************************!*\
-  !*** ./src/company-address/index.js ***!
-  \**************************************/
+/***/ "./src/company-email/index.js"
+/*!************************************!*\
+  !*** ./src/company-email/index.js ***!
+  \************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/company-address/style.scss");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/company-address/edit.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block.json */ "./src/company-address/block.json");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/company-email/style.scss");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/company-email/edit.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block.json */ "./src/company-email/block.json");
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
@@ -163,10 +163,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
-/***/ "./src/company-address/style.scss"
-/*!****************************************!*\
-  !*** ./src/company-address/style.scss ***!
-  \****************************************/
+/***/ "./src/company-email/style.scss"
+/*!**************************************!*\
+  !*** ./src/company-email/style.scss ***!
+  \**************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -235,13 +235,13 @@ module.exports = window["wp"]["i18n"];
 
 /***/ },
 
-/***/ "./src/company-address/block.json"
-/*!****************************************!*\
-  !*** ./src/company-address/block.json ***!
-  \****************************************/
+/***/ "./src/company-email/block.json"
+/*!**************************************!*\
+  !*** ./src/company-email/block.json ***!
+  \**************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"mindset-blocks/company-address","version":"1.0.0","title":"Company Address","category":"text","icon":"location","description":"Output the company address with an optional icon.","example":{},"supports":{"html":false},"attributes":{"svgIcon":{"type":"boolean","default":false}},"textdomain":"company-address","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"mindset-blocks/company-email","version":"1.0.0","title":"Company email","category":"text","icon":"email","description":"Output the company email with an optional icon.","example":{},"supports":{"html":false},"attributes":{"svgIcon":{"type":"boolean","default":false}},"textdomain":"company-email","editorScript":"file:./index.js","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ }
 
@@ -361,8 +361,8 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"company-address/index": 0,
-/******/ 			"company-address/style-index": 0
+/******/ 			"company-email/index": 0,
+/******/ 			"company-email/style-index": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -412,7 +412,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["company-address/style-index"], () => (__webpack_require__("./src/company-address/index.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["company-email/style-index"], () => (__webpack_require__("./src/company-email/index.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

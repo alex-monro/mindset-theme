@@ -1,0 +1,24 @@
+	{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "acf/tabs-block",
+    "version": "0.1.0",
+    "title": "Tabs",
+    "category": "widgets",
+    "icon": "kitchensink",
+    "description": "A tabs block that switches content.",
+    "example": {},
+    "keywords": ["tabs", "navigation"],
+    "acf": {
+        "blockVersion": 3,
+        "renderTemplate": "render.php"
+    },
+    "supports": {
+        "anchor": true,
+        "align": false
+    },
+    "textdomain": "tabs",
+    "editorScript": "file:./index.js",
+    "style": "file:./style-index.css",
+    "viewScript": "file:./view.js"
+}
